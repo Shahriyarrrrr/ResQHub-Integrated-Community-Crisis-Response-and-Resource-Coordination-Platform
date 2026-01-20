@@ -39,7 +39,7 @@ class AdminController
         $this->logModel          = new ActivityLogModel();
     }
 
-    /* DASHBOARD */
+
 
     public function dashboard()
     {
@@ -65,7 +65,7 @@ class AdminController
         ]);
     }
 
-    /* USER MANAGEMENT */
+
 
     public function listUsers()
     {
@@ -98,7 +98,7 @@ class AdminController
         $this->jsonResponse(false, 'Failed to update user status');
     }
 
-    /* REQUEST OVERSIGHT */
+
 
     public function listRequests()
     {
@@ -131,7 +131,7 @@ class AdminController
         $this->jsonResponse(false, 'Failed to override request status');
     }
 
-    /* DONATIONS & PAYMENTS */
+
     public function listDonations()
 {
     $donations = $this->donationModel->getAllDonations();
@@ -156,8 +156,6 @@ class AdminController
         $transactions = $this->paymentModel->getAllTransactions();
         $this->jsonResponse(true, 'Transactions fetched', $transactions);
     }
-
-    /*  CURRENCY MANAGEMENT */
 
     public function currencies()
     {
@@ -219,7 +217,6 @@ class AdminController
         $this->jsonResponse(false, 'Failed to remove currency');
     }
 
-    /* SYSTEM NOTIFICATIONS */
 
     public function broadcast($data)
     {
@@ -249,7 +246,6 @@ class AdminController
         $this->jsonResponse(true, 'Broadcast sent');
     }
 
-    /* JSON RESPONSE */
 
     private function jsonResponse($success, $message, $data = null)
     {
