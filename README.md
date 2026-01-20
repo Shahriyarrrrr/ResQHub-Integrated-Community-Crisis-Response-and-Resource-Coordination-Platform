@@ -74,51 +74,6 @@ The system provides a centralized administrative dashboard, real-time request mo
 
 ---
 
-## 📌 Key Features
-
-### 🔐 Authentication & Authorization
-- Secure login system with password hashing
-- Role-based access control (Admin, Volunteer, Citizen)
-- Session-based authentication
-- Account status management (Active / Suspended)
-
-### 👤 User Management (Admin)
-- View all registered users
-- Activate or suspend user accounts
-- Role visibility and status badges
-- Activity logging for administrative actions
-
-### 🚨 Emergency Request Management
-- Citizens can submit emergency requests
-- Admins can monitor and override request status
-- Volunteers receive assigned requests
-- Status lifecycle handling (Pending, Resolved, Cancelled)
-
-### 🤝 Volunteer Coordination
-- Volunteer assignment to emergency requests
-- Active assignment tracking
-- Availability validation for volunteers
-- Assignment status updates
-
-### 💰 Donation Management
-- Donation creation with currency support
-- Donation listing and tracking
-- Region-based and currency-based summaries
-- Admin donation overview dashboard
-
-### 📊 Admin Dashboard
-- Total users count
-- Active emergency requests
-- Total donations
-- Transaction overview
-- Clean, professional UI with real-time data
-
-### 🔔 Notifications & Activity Logs
-- System-wide broadcast notifications
-- User-specific notifications
-- Activity logging for critical system events
-
----
 
 ## 🛠️ Technology Stack
 
