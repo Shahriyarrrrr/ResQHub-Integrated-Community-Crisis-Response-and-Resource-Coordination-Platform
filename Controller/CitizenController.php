@@ -21,7 +21,8 @@ class CitizenController
     {
         session_start();
 
-        if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'citizen') {
+        if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'citizen') 
+        {
             $this->jsonResponse(false, 'Unauthorized access');
         }
 
@@ -33,15 +34,14 @@ class CitizenController
         $this->userModel         = new UserModel();
     }
 
-    /* =====================
-       PROFILE (FIXED)
-    ===================== */
+
 
     public function profile()
     {
         $user = $this->userModel->getUserById($_SESSION['user_id']);
 
-        if (!$user) {
+        if (!$user) 
+        {
             $this->jsonResponse(false, 'User not found');
         }
 
@@ -55,7 +55,8 @@ class CitizenController
 
     public function updateProfile($data)
     {
-        if (empty($data['full_name'])) {
+        if (empty($data['full_name'])) 
+        {
             $this->jsonResponse(false, 'Name is required');
         }
 
@@ -71,16 +72,14 @@ class CitizenController
             ':user_id'   => $_SESSION['user_id']
         ]);
 
-        if ($updated) {
+        if ($updated) 
+        {
             $this->jsonResponse(true, 'Profile updated successfully');
         }
 
         $this->jsonResponse(false, 'Update failed');
     }
 
-    /* =====================
-       JSON RESPONSE
-    ===================== */
 
     private function jsonResponse($success, $message, $data = null)
     {
